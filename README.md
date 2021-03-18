@@ -16,7 +16,11 @@
 Для функциональных требований нужно составить UML UseCase-диаграммы, описывающие реализующие их прецеденты использования.
 
 # Laboratory work 2 #
-**Variant : 273826** ![schemalab2](https://github.com/toniminh161200/Softwareengineering-basics/blob/main/LAB2/schemalab2.jpg)
+**Variant : 273826** 
+
+<p align="center">
+  <img src="https://github.com/toniminh161200/Softwareengineering-basics/blob/main/LAB2/schemalab2.jpg" />
+</p>
 
 Сконфигурировать в своём домашнем каталоге репозитории svn и git и загрузить в них начальную ревизию файлов с исходными кодами (в соответствии с выданным вариантом).
 
