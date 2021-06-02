@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="lab4" default="build" basedir=".">
+    <property file="build.properties"/>
+
+    <path id="classpath.test">
+        <pathelement location="${junit.lib}" />
+        <pathelement location="${hamcrest-core}" />
+        <pathelement location="${ant.junit.lib}" />
+    </path>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="${compiled.classes}"/>
+
+        <javac destdir="${compiled.classes}" includeantruntime="false">
+            <src path="${src}"/>
+            <classpath>
+                <pathelement location="${compiled.classes}"/>
+                <path refid="classpath.test"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="build" depends="compile">
+        <jar destfile="${jar}" basedir="${compiled.classes}" compress="false" index="true">
+            <manifest>
+                <attribute name="Main-Class" value="Programm"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="clean">
+        <delete dir="${compiled.classes}"/>
+        <delete file="${jar}"/>
+    </target>
+
+</project>
